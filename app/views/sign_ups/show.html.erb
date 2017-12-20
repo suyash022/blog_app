@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sign_up.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @sign_up.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @sign_up.password %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @sign_up.address %>
+</p>
+
+<%= link_to 'Edit', edit_sign_up_path(@sign_up) %> |
+<%= link_to 'Back', sign_ups_path %>

@@ -1,0 +1,37 @@
+<%= form_with(model: sign_up, local: true) do |form| %>
+  <% if sign_up.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sign_up.errors.count, "error") %> prohibited this sign_up from being saved:</h2>
+
+      <ul>
+      <% sign_up.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :sign_up_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :sign_up_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password, id: :sign_up_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :sign_up_address %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
